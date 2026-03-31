@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased font-sans text-slate-100 bg-surface-950;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-lg px-4 py-2.5 text-sm font-semibold
+           bg-brand-blue text-white
+           hover:bg-brand-blue-light
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2 focus-visible:ring-offset-surface-950
+           disabled:pointer-events-none disabled:opacity-60
+           transition-colors;
+  }
+  .btn-accent {
+    @apply inline-flex items-center justify-center rounded-lg px-4 py-2.5 text-sm font-semibold
+           bg-brand-yellow text-surface-950
+           hover:bg-brand-yellow-light
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-yellow focus-visible:ring-offset-2 focus-visible:ring-offset-surface-950
+           disabled:pointer-events-none disabled:opacity-60
+           transition-colors;
+  }
+  .card {
+    @apply rounded-xl border border-surface-700/80 bg-surface-900/80 shadow-lg;
+  }
+  .input-base {
+    @apply w-full rounded-lg border border-surface-700 bg-surface-950 px-3 py-2.5 text-sm text-slate-100
+           placeholder:text-slate-500
+           focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent
+           transition-shadow;
+  }
+  .label {
+    @apply block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1.5;
+  }
+}
